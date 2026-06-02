@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+    <title>A.A.Q Solution & Outsourcing</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== HAMBURGER BUTTON (Mobile) ===== -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- ===== SIDEBAR NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <img src="assets/logo.png" alt="AAQ Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" onclick="closeNav()"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#about" class="nav-link" onclick="closeNav()"><i class="fa-solid fa-circle-info"></i> About</a></li>
+            <li><a href="#services" class="nav-link" onclick="closeNav()"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+            <li><a class="nav-link" onclick="openPopup('bookingPopup'); closeNav()"><i class="fa-solid fa-book"></i> Book Event</a></li>
+            <li><a class="nav-link" onclick="openPopup('feedbackPopup'); closeNav()"><i class="fa-solid fa-comment"></i> Feedback</a></li>
+            <li><a class="nav-link" onclick="openPopup('complaintPopup'); closeNav()"><i class="fa-solid fa-hand"></i> Complaint</a></li>
+            <li><a href="https://wa.me/917600263704" target="_blank" class="nav-link contact-link" onclick="closeNav()"><i class="fa-brands fa-whatsapp"></i> Contact Us</a></li>
+            <li><a href="#" class="nav-link webapp-link" onclick="closeNav()"><i class="fa-brands fa-react"></i> Web App</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== OVERLAY (Mobile) ===== -->
+    <div class="overlay" id="overlay" onclick="closeNav()"></div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-text">
+                <h1>A.A.Q Solutions<br><span>&amp; Outsourcing</span></h1>
+                <h4>Professional Event Management & Staffing Services</h4>
+                <a href="#services" class="hero-btn">Explore Services <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-card">
+                <h2><i class="fa-solid fa-star"></i> About Us</h2>
+                <p>A.A.Q Solutions &amp; Outsourcing provides professional event management, staffing, live streaming, corporate event support, religious program management and VIP event solutions across India.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/romve.png" alt="About AAQ">
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h3>Event Management</h3>
+                    <p>Professional event handling solutions from start to finish.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-building"></i>
+                    <h3>Corporate Events</h3>
+                    <p>Premium corporate event services tailored to your brand.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-mosque"></i>
+                    <h3>Religious Programs</h3>
+                    <p>Islamic &amp; social program management with care.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-video"></i>
+                    <h3>Live Streaming</h3>
+                    <p>Professional streaming setup for any event size.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-people-group"></i>
+                    <h3>Event Staffing</h3>
+                    <p>Professional crew &amp; volunteer support teams.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-crown"></i>
+                    <h3>VIP Management</h3>
+                    <p>Luxury guest &amp; VIP support services.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== POPUPS ===== -->
+
+    <!-- Booking Popup -->
+    <div class="popup" id="bookingPopup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('bookingPopup')"><i class="fa-solid fa-circle-xmark"></i></span>
+            <h2><i class="fa-solid fa-book"></i> Book Event</h2>
+            <form autocomplete="off" action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                <input type="hidden" name="subject" value="new_booking_event">
+                <label class="float-label">
+                    <input type="text" name="Name" required placeholder=" ">
+                    <span>Full Name</span>
+                </label>
+                <label class="float-label">
+                    <input type="tel" name="number" required placeholder=" ">
+                    <span>Phone Number</span>
+                </label>
+                <label class="float-label">
+                    <input type="email" name="email" required placeholder=" ">
+                    <span>Email Address</span>
+                </label>
+                <select name="eventtype" required>
+                    <option value="">Select Event Type</option>
+                    <option>Meeting</option>
+                    <option>Seminar</option>
+                    <option>Live Streaming</option>
+                    <option>Religious Program</option>
+                    <option>Corporate Event</option>
+                    <option>Webinar</option>
+                </select>
+                <textarea name="message" placeholder="Event details..."></textarea>
+                <button type="submit" class="btn-submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Feedback Popup -->
+    <div class="popup" id="feedbackPopup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('feedbackPopup')"><i class="fa-solid fa-circle-xmark"></i></span>
+            <h2><i class="fa-solid fa-comment"></i> Feedback</h2>
+            <form autocomplete="off" action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                <input type="hidden" name="subject" value="new_feedback">
+                <label class="float-label">
+                    <input type="text" name="Name" required placeholder=" ">
+                    <span>Full Name</span>
+                </label>
+                <label class="float-label">
+                    <input type="tel" name="number" required placeholder=" ">
+                    <span>Phone Number</span>
+                </label>
+                <label class="float-label">
+                    <input type="email" name="email" required placeholder=" ">
+                    <span>Email Address</span>
+                </label>
+                <select name="rating" required>
+                    <option value="">Rate Our Service</option>
+                    <option>⭐ Poor</option>
+                    <option>⭐⭐ Average</option>
+                    <option>⭐⭐⭐ Good</option>
+                    <option>⭐⭐⭐⭐ Very Good</option>
+                    <option>⭐⭐⭐⭐⭐ Excellent</option>
+                </select>
+                <textarea name="message" placeholder="Share your feedback..."></textarea>
+                <button type="submit" class="btn-submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Complaint Popup -->
+    <div class="popup" id="complaintPopup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('complaintPopup')"><i class="fa-solid fa-circle-xmark"></i></span>
+            <h2><i class="fa-solid fa-hand"></i> Complaint</h2>
+            <form autocomplete="off" action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                <input type="hidden" name="subject" value="new_complaint">
+                <label class="float-label">
+                    <input type="text" name="Name" required placeholder=" ">
+                    <span>Full Name</span>
+                </label>
+                <label class="float-label">
+                    <input type="tel" name="number" required placeholder=" ">
+                    <span>Phone Number</span>
+                </label>
+                <label class="float-label">
+                    <input type="email" name="email" required placeholder=" ">
+                    <span>Email Address</span>
+                </label>
+                <select name="complainttype" required>
+                    <option value="">Complaint Type</option>
+                    <option>Service Issue</option>
+                    <option>Staff Behavior</option>
+                    <option>Event Quality</option>
+                    <option>Other</option>
+                </select>
+                <textarea name="message" placeholder="Describe your complaint..."></textarea>
+                <button type="submit" class="btn-submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
