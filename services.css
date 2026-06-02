@@ -1,0 +1,76 @@
+/* =============================================
+   services.css — Services Section
+   ============================================= */
+
+.services-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-main);
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 48px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 4px;
+    margin: 10px auto 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: var(--card-bg);
+    backdrop-filter: var(--blur);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--radius);
+    padding: 36px 24px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+    cursor: default;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.13);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+    border-color: var(--accent);
+}
+
+.service-card i {
+    font-size: 2.4rem;
+    color: var(--accent);
+    margin-bottom: 18px;
+    display: block;
+}
+
+.service-card h3 {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.service-card p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.6;
+}
